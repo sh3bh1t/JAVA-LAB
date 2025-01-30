@@ -2,24 +2,26 @@ interface compute{
     double convert(double value);
 }
 
-class eurToinr implements compute{
-    public double convert(double eur){
-        return eur *90;
+class gbTObytes1 implements compute{
+    @Override
+    public double convert(double value){
+        return value*102478493;
     }
 }
-class gbTob implements compute{
-    public double convert(double gb){
-        return gb*102478493;
+
+class eurTOinr1 implements compute{
+    @Override
+    public double convert(double value){
+        return value*90;
     }
 }
 
 class prog91{
     public static void main(String[] args) {
-        compute EURtoINR = new eurToinr();
-        compute GBtoBYTES = new gbTob();
+        compute eTi = new eurTOinr1();
+        compute gTb = new gbTObytes1();
 
-        System.out.println("euro in rupee is  : " + EURtoINR.convert(20));
-        System.out.println("gb in bytes is  : " + GBtoBYTES.convert(5));
+        System.out.println("euro in rupees is : " + eTi.convert(20));
+        System.out.println("gb in bytes is : " + gTb.convert(5));
     }
 }
-
